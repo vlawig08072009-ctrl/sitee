@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mochi &amp; Mittens – Cat Heaven</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+  <style>
+    body{font-family:'Manrope',system-ui,sans-serif}
+    .serif{font-family:'DM Serif Display',Georgia,serif;font-weight:400}
+  </style>
+</head>
+<body class="bg-[#E9EEF2] text-[#14213D] antialiased">
+
+<div class="lg:grid lg:grid-cols-[320px_1fr]">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="bg-[#14213D] text-white lg:sticky lg:top-0 lg:h-screen flex flex-col justify-between p-8">
+    <div>
+      <a href="#home" class="serif text-3xl leading-tight block">Mochi<br>&amp; Mittens</a>
+      <p class="mt-2 text-sm text-slate-300">Online store for cats</p>
+
+      <nav class="mt-8 lg:mt-14" aria-label="Main">
+        <ul class="flex lg:block gap-6 lg:gap-0 text-lg font-bold lg:space-y-3">
+          <li><a href="#home" class="block hover:text-[#FF6B57] transition lg:hover:translate-x-2">Home</a></li>
+          <li><a href="#shop" class="block hover:text-[#FF6B57] transition lg:hover:translate-x-2">Shop</a></li>
+          <li><a href="#contact" class="block hover:text-[#FF6B57] transition lg:hover:translate-x-2">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="mt-8 lg:mt-0 space-y-4">
+      <div class="border-2 border-dashed border-[#FF6B57] rounded-2xl p-4 text-center">
+        <p class="text-sm font-bold text-[#FF6B57]">Special Offer</p>
+        <p class="serif text-2xl leading-tight">10% OFF your first order!</p>
+      </div>
+      <div class="flex items-center justify-between bg-white/10 rounded-full px-5 py-3 font-bold">
+        <span>Your cart</span>
+        <span class="bg-[#FF6B57] text-white rounded-full min-w-8 text-center px-2 py-0.5" id="cart-count">0</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============ CONTENT ============ -->
+  <main>
+
+    <!-- SCREEN 1: HOME -->
+    <section id="home" class="relative min-h-screen px-8 lg:px-16 py-16 grid xl:grid-cols-[1.1fr_.9fr] gap-10 items-center overflow-hidden">
+      <div class="relative z-10 max-w-xl">
+        <h1 class="serif text-6xl sm:text-7xl xl:text-8xl leading-[0.95]">
+          Welcome to Cat Heaven!
+        </h1>
+        <p class="mt-8 text-xl font-semibold text-slate-600 max-w-md">
+          We sell the best food, toys, and accessories for your sleepy, curious, wonderful cat.
+        </p>
+        <a href="#shop" class="group inline-flex items-center gap-3 mt-10 bg-[#FF6B57] hover:bg-[#14213D] text-white text-lg font-extrabold pl-8 pr-4 py-3 rounded-full transition focus:outline-none focus:ring-4 focus:ring-[#FF6B57]/40">
+          Go to Shop
+          <span class="grid place-items-center w-10 h-10 rounded-full bg-white text-[#14213D] group-hover:translate-y-1 transition" aria-hidden="true">↓</span>
+        </a>
+      </div>
+
+      <!-- cat photo -->
+      <img src="https://unsplash.com/photos/DLKybuvRwyo/download?force=true&w=900" alt="A grey cat with amber eyes sitting on a couch"
+           class="relative z-10 w-full max-w-sm xl:max-w-md mx-auto aspect-[4/5] object-cover rounded-t-[999px] rounded-b-3xl border-4 border-[#14213D] shadow-[10px_10px_0_#FF6B57]"
+           onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22%3E%3Crect width=%22200%22 height=%22200%22 fill=%22%23FFD6CF%22/%3E%3Ctext x=%22100%22 y=%22135%22 font-size=%2290%22 text-anchor=%22middle%22%3E🐱%3C/text%3E%3C/svg%3E';">
+    </section>
+
+    <!-- SCREEN 2: SHOP (list layout) -->
+    <section id="shop" class="min-h-screen bg-white px-8 lg:px-16 py-20">
+      <h2 class="serif text-5xl lg:text-6xl">Our Best Sellers</h2>
+      <p class="mt-3 text-slate-500 font-semibold">Three things every cat secretly wants.</p>
+
+      <ul class="mt-12 divide-y-2 divide-[#14213D]/10 border-y-2 border-[#14213D]/10">
+
+        <!-- Product 1 -->
+        <li class="group flex flex-col sm:flex-row sm:items-center gap-6 py-8 hover:bg-[#E9EEF2]/60 transition px-2 sm:px-4 -mx-2 sm:-mx-4 rounded-2xl">
+          <div class="shrink-0 w-32 h-32 rounded-full bg-[#FFD6CF] overflow-hidden border-4 border-[#14213D] group-hover:scale-110 transition">
+            <img src="https://unsplash.com/photos/WRtlUYIYnk8/download?force=true&w=400" alt="Tabby cat playing with a plush toy" loading="lazy" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22%3E%3Crect width=%22200%22 height=%22200%22 fill=%22%23FFD6CF%22/%3E%3Ctext x=%22100%22 y=%22135%22 font-size=%2290%22 text-anchor=%22middle%22%3E🐭%3C/text%3E%3C/svg%3E';">
+          </div>
+          <div class="flex-1">
+            <h3 class="serif text-3xl">Catnip Mouse Toy</h3>
+            <p class="mt-1 text-slate-500 font-semibold">Soft, squeaky and filled with premium catnip.</p>
+          </div>
+          <div class="flex sm:flex-col items-center sm:items-end justify-between gap-3">
+            <p class="serif text-4xl">$7.99</p>
+            <button class="add-to-cart bg-[#14213D] hover:bg-[#FF6B57] text-white font-bold px-7 py-3 rounded-full transition">Add to Cart</button>
+          </div>
+        </li>
+
+        <!-- Product 2 -->
+        <li class="group flex flex-col sm:flex-row sm:items-center gap-6 py-8 hover:bg-[#E9EEF2]/60 transition px-2 sm:px-4 -mx-2 sm:-mx-4 rounded-2xl">
+          <div class="shrink-0 w-32 h-32 rounded-full bg-[#C9E6F2] overflow-hidden border-4 border-[#14213D] group-hover:scale-110 transition">
+            <img src="https://unsplash.com/photos/KgmSAEncZDw/download?force=true&w=400" alt="Two cats sharing a tasty treat" loading="lazy" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22%3E%3Crect width=%22200%22 height=%22200%22 fill=%22%23C9E6F2%22/%3E%3Ctext x=%22100%22 y=%22135%22 font-size=%2290%22 text-anchor=%22middle%22%3E🐟%3C/text%3E%3C/svg%3E';">
+          </div>
+          <div class="flex-1">
+            <h3 class="serif text-3xl">Tasty Fish Treats</h3>
+            <p class="mt-1 text-slate-500 font-semibold">Crunchy salmon bites, made without artificial colors.</p>
+          </div>
+          <div class="flex sm:flex-col items-center sm:items-end justify-between gap-3">
+            <p class="serif text-4xl">$12.50</p>
+            <button class="add-to-cart bg-[#14213D] hover:bg-[#FF6B57] text-white font-bold px-7 py-3 rounded-full transition">Add to Cart</button>
+          </div>
+        </li>
+
+        <!-- Product 3 -->
+        <li class="group flex flex-col sm:flex-row sm:items-center gap-6 py-8 hover:bg-[#E9EEF2]/60 transition px-2 sm:px-4 -mx-2 sm:-mx-4 rounded-2xl">
+          <div class="shrink-0 w-32 h-32 rounded-full bg-[#FFE7A8] overflow-hidden border-4 border-[#14213D] group-hover:scale-110 transition">
+            <img src="https://unsplash.com/photos/TS9EPbLmfTI/download?force=true&w=400" alt="Tabby cat wearing a collar with a bell" loading="lazy" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22%3E%3Crect width=%22200%22 height=%22200%22 fill=%22%23FFE7A8%22/%3E%3Ctext x=%22100%22 y=%22135%22 font-size=%2290%22 text-anchor=%22middle%22%3E🔔%3C/text%3E%3C/svg%3E';">
+          </div>
+          <div class="flex-1">
+            <h3 class="serif text-3xl">Cozy Cat Collar</h3>
+            <p class="mt-1 text-slate-500 font-semibold">Adjustable, ultra-soft and finished with a tiny bell.</p>
+          </div>
+          <div class="flex sm:flex-col items-center sm:items-end justify-between gap-3">
+            <p class="serif text-4xl">$14.99</p>
+            <button class="add-to-cart bg-[#14213D] hover:bg-[#FF6B57] text-white font-bold px-7 py-3 rounded-full transition">Add to Cart</button>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="bg-[#FF6B57] text-white px-8 lg:px-16 py-14">
+      <p class="serif text-4xl">Free shipping on orders over $30.</p>
+      <div class="mt-6 flex flex-wrap items-center gap-x-8 gap-y-3 font-bold">
+        <a href="#home" class="underline underline-offset-4 hover:text-[#14213D] transition">Back to Top</a>
+        <span>Website created by Ganieva Madina</span>
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+  let count = 0;
+  const counter = document.getElementById('cart-count');
+  document.querySelectorAll('.add-to-cart').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      count++;
+      counter.textContent = count;
+      btn.textContent = 'Added ✓';
+      setTimeout(function () { btn.textContent = 'Add to Cart'; }, 1200);
+    });
+  });
+</script>
+</body>
+</html>
